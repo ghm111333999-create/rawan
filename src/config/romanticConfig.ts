@@ -7,9 +7,6 @@
 //   /public/music/romantic-piano.mp3
 
 import heroFloralImg from '../assets/images/hero_floral_still_life_1794521635442.jpg';
-import memoryPicnicImg from '../assets/images/memory_favorite_picnic_1794521632923.jpg';
-import memoryEveningImg from '../assets/images/memory_special_evening_1794521633910.jpg';
-import memoryMomentImg from '../assets/images/memory_little_moment_1794521634427.jpg';
 import illustrationGardenImg from '../assets/images/illustration_strawberry_garden_1794521634274.jpg';
 
 export interface MemoryItem {
@@ -83,7 +80,7 @@ export const romanticConfig = {
         locationLabel: 'Under the olive trees',
         story:
           'An unhurried afternoon in the garden where time slowed down—just dappled sunlight, fresh strawberries, and your laugh.',
-        imageSrc: '/images/memories/1.jpg',
+        imageSrc: '/images/memories/1.jpeg',
         imageAlt: 'Sunlit linen picnic blanket with strawberries in a ceramic bowl, blush roses, and two porcelain teacups',
         kind: 'photograph',
         aspectClass: 'aspect-[3/4]',
@@ -97,7 +94,7 @@ export const romanticConfig = {
         locationLabel: 'The terrace garden',
         story:
           'Twilight settling over the roses, soft candlelight flickering across the table, and a note saved for a moment just like this.',
-        imageSrc: '/images/memories/2.jpg',
+        imageSrc: '/images/memories/2.jpeg',
         imageAlt: 'Candlelit stone terrace table with blush peonies, crystal glassware, and a wax-sealed letter',
         kind: 'photograph',
         aspectClass: 'aspect-[4/3]',
@@ -111,7 +108,7 @@ export const romanticConfig = {
         locationLabel: 'By the sunlit window',
         story:
           'Even the simplest mornings feel like a small holiday when shared across a quiet table.',
-        imageSrc: '/images/memories/3.jpg',
+        imageSrc: '/images/memories/3.jpeg',
         imageAlt: 'Morning window light falling across a travertine table with a strawberry tart and two warm coffees',
         kind: 'photograph',
         aspectClass: 'aspect-[3/4]',
