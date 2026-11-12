@@ -1,0 +1,8 @@
+{
+  "name": "A Little World, Just for You",
+  "description": "A luxury romantic digital gift featuring an interactive love letter, cherished memories gallery, custom strawberry cursor, falling petals, and soft piano music.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

@@ -1,0 +1,171 @@
+@import "tailwindcss";
+
+:root {
+  --color-champagne: #F3DDE3;
+  --color-blush: #EBC6D0;
+  --color-ivory: #FFF9F5;
+  --color-rose-beige: #D9B7AC;
+  --color-burgundy: #783D50;
+  --color-ink: #4A2531;
+  --color-strawberry: #C83E50;
+  --color-gold: #C9A77B;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--color-ivory);
+    color: var(--color-ink);
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow-x: hidden;
+  }
+
+  body {
+    overflow-x: hidden;
+    background-color: var(--color-ivory);
+  }
+}
+
+/* Custom Typography Helpers */
+.font-serif-editorial {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-handwritten {
+  font-family: 'Caveat', cursive, serif;
+}
+
+.font-sans-clean {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Hide native cursor only when custom strawberry cursor is active on desktop */
+@media (hover: hover) and (pointer: fine) {
+  body.custom-cursor-active,
+  body.custom-cursor-active * {
+    cursor: none !important;
+  }
+}
+
+/* Gentle Romantic Motion Keyframes (Compositor-only: transform & opacity) */
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translate3d(0, 0px, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate3d(0, -10px, 0) rotate(1.5deg);
+  }
+}
+
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translate3d(0, 0px, 0);
+  }
+  50% {
+    transform: translate3d(0, -6px, 0);
+  }
+}
+
+@keyframes petalFall {
+  0% {
+    transform: translate3d(0, -10vh, 0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: var(--petal-opacity, 0.72);
+  }
+  50% {
+    transform: translate3d(var(--petal-sway, 32px), 48vh, 0) rotate(var(--petal-rot-mid, 140deg));
+  }
+  88% {
+    opacity: var(--petal-opacity, 0.72);
+  }
+  100% {
+    transform: translate3d(var(--petal-sway-end, -22px), 108vh, 0) rotate(var(--petal-rot-end, 300deg));
+    opacity: 0;
+  }
+}
+
+@keyframes shimmerSoft {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(0.92);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.12);
+  }
+}
+
+@keyframes heartGlow {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.85;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+}
+
+@keyframes burstRise {
+  0% {
+    transform: translate3d(0, 0, 0) scale(0.4) rotate(0deg);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.95;
+  }
+  100% {
+    transform: translate3d(var(--bx, 0px), var(--by, -120px), 0) scale(var(--bs, 1)) rotate(var(--br, 25deg));
+    opacity: 0;
+  }
+}
+
+@keyframes musicBar {
+  0%, 100% {
+    transform: scaleY(0.35);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 6.5s ease-in-out infinite;
+}
+
+.animate-float-gentle {
+  animation: floatGentle 4.8s ease-in-out infinite;
+}
+
+.animate-shimmer-soft {
+  animation: shimmerSoft 3.6s ease-in-out infinite;
+}
+
+.animate-heart-glow {
+  animation: heartGlow 3.2s ease-in-out infinite;
+}
+
+/* Focus ring styling for keyboard accessibility */
+:focus-visible {
+  outline: 2px solid var(--color-burgundy);
+  outline-offset: 3px;
+}
+
+/* Reduced motion compliance */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-float-slow,
+  .animate-float-gentle,
+  .animate-shimmer-soft,
+  .animate-heart-glow {
+    animation: none !important;
+  }
+}
